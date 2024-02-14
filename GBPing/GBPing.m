@@ -363,7 +363,7 @@ static NSTimeInterval const kDefaultTimeout =           2.0;
     void *                  buffer;
     enum { kBufferSize = 65535 };
     
-    buffer = malloc(kBufferSize);
+    buffer = calloc(1, kBufferSize);
 
     if (buffer == nil) {
         err = errno;
